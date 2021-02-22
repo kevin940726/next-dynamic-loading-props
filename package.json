@@ -1,0 +1,41 @@
+{
+  "name": "next-loadable",
+  "version": "0.0.0",
+  "description": "Customizable loading components for next/dynamic",
+  "source": "src/index.tsx",
+  "main": "dist/next-loadable.js",
+  "exports": "./dist/next-loadable.modern.js",
+  "module": "dist/next-loadable.module.js",
+  "unpkg": "dist/next-loadable.umd.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle --jsx React.createElement --globals react=React",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin940726/next-loadable.git"
+  },
+  "keywords": [
+    "next",
+    "next-dynamic",
+    "loadable"
+  ],
+  "author": "Kai Hao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevin940726/next-loadable/issues"
+  },
+  "homepage": "https://github.com/kevin940726/next-loadable#readme",
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "microbundle": "^0.13.0",
+    "prettier": "2.2.1"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
