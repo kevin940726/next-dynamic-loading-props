@@ -1,19 +1,21 @@
 {
-  "name": "next-loadable",
+  "name": "next-dynamic-loading-props",
   "version": "0.0.0",
-  "description": "Customizable loading components for next/dynamic",
+  "description": "Pass props to the loading components in next/dynamic",
   "source": "src/index.tsx",
-  "main": "dist/next-loadable.js",
-  "exports": "./dist/next-loadable.modern.js",
-  "module": "dist/next-loadable.module.js",
-  "unpkg": "dist/next-loadable.umd.js",
+  "main": "dist/next-dynamic-loading-props.js",
+  "exports": "./dist/next-dynamic-loading-props.modern.js",
+  "module": "dist/next-dynamic-loading-props.module.js",
+  "unpkg": "dist/next-dynamic-loading-props.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "next:dev": "next dev",
     "next:build": "next build",
     "next:start": "next start",
     "build": "microbundle --jsx React.createElement --globals react=React",
-    "test": "npm test"
+    "build:all": "npm run build && npm run next:build",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "repository": {
     "type": "git",
