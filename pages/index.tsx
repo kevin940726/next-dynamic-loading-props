@@ -1,12 +1,12 @@
 import { ReactNode, useState } from 'react';
 import dynamic from 'next/dynamic';
-import loadable from '../';
+import withLoadingProps from '../';
 
 interface ModalProps {
   children: ReactNode;
 }
 
-const Modal = loadable<ModalProps>((useLoadingProps) =>
+const Modal = withLoadingProps<ModalProps>((useLoadingProps) =>
   dynamic(() => import(/* webpackChunkName: "modal" */ '../components/modal'), {
     ssr: false,
     loading: () => {
