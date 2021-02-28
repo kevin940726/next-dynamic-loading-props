@@ -4,7 +4,6 @@
   "description": "Pass props to the loading components in next/dynamic",
   "source": "src/index.tsx",
   "main": "dist/next-dynamic-loading-props.js",
-  "exports": "./dist/next-dynamic-loading-props.modern.js",
   "module": "dist/next-dynamic-loading-props.module.js",
   "unpkg": "dist/next-dynamic-loading-props.umd.js",
   "types": "dist/index.d.ts",
