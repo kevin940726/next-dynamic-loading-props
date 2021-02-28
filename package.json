@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevin940726/next-loadable.git"
+    "url": "git+https://github.com/kevin940726/next-dynamic-loading-props.git"
   },
   "keywords": [
     "next",
@@ -29,9 +29,9 @@
   "author": "Kai Hao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kevin940726/next-loadable/issues"
+    "url": "https://github.com/kevin940726/next-dynamic-loading-props/issues"
   },
-  "homepage": "https://github.com/kevin940726/next-loadable#readme",
+  "homepage": "https://github.com/kevin940726/next-dynamic-loading-props#readme",
   "peerDependencies": {
     "react": ">= 16.9.0"
   },
