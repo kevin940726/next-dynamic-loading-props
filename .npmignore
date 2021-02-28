@@ -1,6 +1,8 @@
 .next/
 cypress/
 pages/
+components/
 cypress.json
 next-env.d.ts
 tsconfig.json
+.github/
