@@ -1,27 +1,19 @@
-import React, { useRef, useEffect, useCallback, ComponentType } from 'react';
+import React, { createContext, useContext, ComponentType } from 'react';
 
 export default function loadable<P = {}>(
-  loader: (loading: ComponentType<P>) => ComponentType<P>,
-  Loading: ComponentType<P>
+  loader: (useLoadingProps: () => P) => ComponentType<P>
 ): ComponentType<P> {
-  return function (props) {
-    const loadingRef = useRef(<Loading {...props} />);
-    const LoadableRef = useRef<ComponentType<P> | null>(null);
+  const LoadingPropsContext = createContext({} as P);
 
-    useEffect(() => {
-      loadingRef.current = <Loading {...props} />;
-    });
+  const useLoadingProps = () => useContext(LoadingPropsContext);
 
-    const getLoadable = useCallback(() => {
-      if (!LoadableRef.current) {
-        LoadableRef.current = loader(() => loadingRef.current);
-      }
+  const Loadable = loader(useLoadingProps);
 
-      return LoadableRef.current;
-    }, []);
-
-    const Loadable = getLoadable();
-
-    return <Loadable {...props} />;
+  return function (props: P) {
+    return (
+      <LoadingPropsContext.Provider value={props}>
+        <Loadable {...props} />
+      </LoadingPropsContext.Provider>
+    );
   };
 }

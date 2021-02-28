@@ -9,6 +9,9 @@
   "unpkg": "dist/next-loadable.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start",
     "build": "microbundle --jsx React.createElement --globals react=React",
     "test": "npm test"
   },
@@ -28,12 +31,17 @@
   },
   "homepage": "https://github.com/kevin940726/next-loadable#readme",
   "peerDependencies": {
-    "react": ">= 16.8.0"
+    "react": ">= 16.9.0"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^7.0.4",
     "@types/react": "^17.0.2",
+    "cypress": "^6.5.0",
     "microbundle": "^0.13.0",
-    "prettier": "2.2.1"
+    "next": "^10.0.7",
+    "prettier": "2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "prettier": {
     "singleQuote": true

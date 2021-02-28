@@ -1,0 +1,6 @@
+.next/
+cypress/
+pages/
+cypress.json
+next-env.d.ts
+tsconfig.json

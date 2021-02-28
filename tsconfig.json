@@ -3,12 +3,30 @@
     "target": "ESNEXT",
     "module": "ESNEXT",
     "outDir": "./dist",
-    "jsx": "react",
+    "jsx": "preserve",
+    "moduleResolution": "Node",
     "declaration": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "types": ["cypress", "@testing-library/cypress"]
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
