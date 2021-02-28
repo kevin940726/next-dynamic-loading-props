@@ -1,6 +1,6 @@
 {
   "name": "next-dynamic-loading-props",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Pass props to the loading components in next/dynamic",
   "source": "src/index.tsx",
   "main": "dist/next-dynamic-loading-props.js",
